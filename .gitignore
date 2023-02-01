@@ -1,3 +1,5 @@
+.idea/
+
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
@@ -6,8 +8,6 @@
 /public/bundles/
 /var/
 ###< symfony/framework-bundle ###
-
-.idea/
 
 # Cache and logs (Symfony2)
 /app/cache/*
@@ -49,6 +49,7 @@
 # PHPUnit
 /app/phpunit.xml
 /phpunit.xml
+.phpunit.result.cache
 
 # Build data
 /build/
