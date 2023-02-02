@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page d'accueil{% endblock %}
+
+{% block body %}
+    <h1>Bienvenue le site du forum des métiers</h1>
+
+        <ul>
+            <li>
+                <a href="{{ path('app_atelier_index') }}">Page Atelier</a>
+            </li>
+            <li>
+                <a href="{{ path('app_activite_index') }}">Page Activité</a>
+            </li>
+            <li>
+                <a href="{{ path('app_competence_index') }}">Page Competence</a>
+            </li>
+            <li>
+                <a href="{{ path('app_creneau_index') }}">Page Créneau</a>
+            </li>
+            <li>
+                <a href="{{ path('app_inscription_index') }}">Page Inscription</a>
+            </li>
+            <li>
+                <a href="{{ path('app_intervenant_index') }}">Page Intervenant</a>
+            </li>
+            <li>
+                <a href="{{ path('app_lyceen_index') }}">Page Lycéen</a>
+            </li>
+            <li>
+                <a href="{{ path('app_lycee_index') }}">Page Lycée</a>
+            </li>
+            <li>
+                <a href="{{ path('app_metier_index') }}">Page Métier</a>
+            </li>
+            <li>
+                <a href="{{ path('app_salle_index') }}">Page Salle</a>
+            </li>
+            <li>
+                <a href="{{ path('app_secteur_index') }}">Page Secteur</a>
+            </li>
+            <li>
+                <a href="{{ path('app_section_index') }}">Page Section</a>
+            </li>
+        </ul>
+
+
+
+{% endblock %}
