@@ -13,7 +13,6 @@ class ActiviteType extends AbstractType
     {
         $builder
             ->add('nom')
-            ->add('metiers')
         ;
     }
 

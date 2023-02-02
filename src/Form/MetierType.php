@@ -2,7 +2,10 @@
 
 namespace App\Form;
 
+use App\Entity\Activite;
+use App\Entity\Competence;
 use App\Entity\Metier;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -13,9 +16,16 @@ class MetierType extends AbstractType
     {
         $builder
             ->add('nom')
-            ->add('competences')
-            ->add('activites')
-            ->add('atelier')
+            ->add('activites',EntityType::class,[
+                "class" => Activite::class,
+                "choice_label" => "nom",
+                "multiple" => true
+            ])
+            ->add('competences',EntityType::class,[
+                "class" => Competence::class,
+                "choice_label" => "nom",
+                "multiple" => true
+            ])
         ;
     }
 
