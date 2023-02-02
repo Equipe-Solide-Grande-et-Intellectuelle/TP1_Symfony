@@ -14,7 +14,6 @@ class SecteurType extends AbstractType
         $builder
             ->add('nom')
             ->add('description')
-            ->add('atelier')
         ;
     }
 

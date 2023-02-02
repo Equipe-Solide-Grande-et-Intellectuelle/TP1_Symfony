@@ -10,6 +10,9 @@
             <tr>
                 <th>Id</th>
                 <th>Date</th>
+                <th>Lycéen</th>
+                <th>Atelier</th>
+                <th>Créneau</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -17,7 +20,10 @@
         {% for inscription in inscriptions %}
             <tr>
                 <td>{{ inscription.id }}</td>
-                <td>{{ inscription.date ? inscription.date|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ inscription.date ? inscription.date|date('Y-m-d') : '' }}</td>
+                <td>{{ inscription.lyceen.nom }} {{ inscription.lyceen.prenom }}</td>
+                <td>{{ inscription.atelier.titre }}</td>
+                <td>{{ inscription.creneau.debut|date('H:i') }}</td>
                 <td>
                     <a href="{{ path('app_inscription_show', {'id': inscription.id}) }}">show</a>
                     <a href="{{ path('app_inscription_edit', {'id': inscription.id}) }}">edit</a>
