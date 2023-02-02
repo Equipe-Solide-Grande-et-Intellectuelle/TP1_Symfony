@@ -2,7 +2,10 @@
 
 namespace App\Form;
 
+use App\Entity\Lycee;
 use App\Entity\Lyceen;
+use App\Entity\Section;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -17,8 +20,14 @@ class LyceenType extends AbstractType
             ->add('email')
             ->add('tel')
             ->add('date_inscription')
-            ->add('lycee')
-            ->add('section')
+            ->add('lycee',EntityType::class,[
+                "class" => Lycee::class,
+                "choice_label" => "nom"
+            ])
+            ->add('section',EntityType::class,[
+                "class" => Section::class,
+                "choice_label" => "nom"
+            ])
         ;
     }
 

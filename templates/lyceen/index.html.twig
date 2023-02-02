@@ -14,6 +14,8 @@
                 <th>Email</th>
                 <th>Tel</th>
                 <th>Date_inscription</th>
+                <th>Lycee</th>
+                <th>Section</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -26,6 +28,8 @@
                 <td>{{ lyceen.email }}</td>
                 <td>{{ lyceen.tel }}</td>
                 <td>{{ lyceen.dateInscription ? lyceen.dateInscription|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ lyceen.lycee.nom }}</td>
+                <td>{{ lyceen.section.nom }}</td>
                 <td>
                     <a href="{{ path('app_lyceen_show', {'id': lyceen.id}) }}">show</a>
                     <a href="{{ path('app_lyceen_edit', {'id': lyceen.id}) }}">edit</a>
